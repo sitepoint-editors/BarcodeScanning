@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="BarcodeScanning" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" userLabel="Content View">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhr-f7-UgC" userLabel="Output View">
+                                <rect key="frame" x="0.0" y="60" width="600" height="480"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTE-kW-lGB" userLabel="DataType">
+                                <rect key="frame" x="300" y="20" width="0.0" height="21"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-be-eZF" userLabel="DataInfo">
+                                <rect key="frame" x="301" y="559" width="0.0" height="21"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fhr-f7-UgC" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="1Th-st-dm6"/>
+                            <constraint firstItem="fhr-f7-UgC" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.8" id="5Ye-IW-weV"/>
+                            <constraint firstItem="fhr-f7-UgC" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="8yU-9E-tTV"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="7ee-be-eZF" secondAttribute="bottom" constant="20" id="9YF-Ut-Jda"/>
+                            <constraint firstItem="YTE-kW-lGB" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Ae3-hq-SmN"/>
+                            <constraint firstItem="YTE-kW-lGB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="OcG-pv-Cum"/>
+                            <constraint firstItem="fhr-f7-UgC" firstAttribute="top" secondItem="YTE-kW-lGB" secondAttribute="bottom" priority="999" constant="19" id="adi-yj-i6H"/>
+                            <constraint firstItem="7ee-be-eZF" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" constant="0.5" id="bAj-XH-4Xg"/>
+                            <constraint firstItem="fhr-f7-UgC" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="mHf-mE-xVr"/>
+                            <constraint firstItem="7ee-be-eZF" firstAttribute="top" secondItem="fhr-f7-UgC" secondAttribute="bottom" priority="999" constant="19" id="twT-i6-bKm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="fhr-f7-UgC" id="Ky1-4i-aUz"/>
+                        <outlet property="lblDataInfo" destination="7ee-be-eZF" id="fnk-Qd-91s"/>
+                        <outlet property="lblDataType" destination="YTE-kW-lGB" id="TwR-gL-EXV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
